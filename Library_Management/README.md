@@ -1,147 +1,190 @@
-# Library Management System
+# 📚 Library Management System
 
-A comprehensive console-based Library Management System built in Java that handles both Administrator and Borrower functionalities with complete authentication, book management, borrowing operations, fine calculations, and detailed reporting.
+A **comprehensive console-based** 📟 Library Management System built in **Java** ☕ that supports both **Administrator** 👨‍💼 and **Borrower** 👩‍🎓 roles with secure login, book management, borrowing operations, fine calculations, and detailed reports.
 
-## Features
+---
 
-### Module A: Authentication and Welcome Menu
-- Email-based authentication for both Admins and Borrowers
-- Role-based menu system
-- Secure login with password verification
+## ✨ Features
 
-### Module B: Book Inventory Management (Admin Only)
-- Add new books with ISBN, title, author, quantity, and cost
-- Modify book details including available quantity
-- Delete books (if not currently borrowed)
-- View books sorted by name or available quantity
-- Search books by title, ISBN, or author
-- User management (add admins and borrowers)
-- Fine limit management for borrowers
+### 🛡️ Module A: Authentication & Welcome Menu
 
-### Module C: Borrowing System (Borrowers)
-- View available books
-- Search books by various criteria
-- Shopping cart system for book selection
-- Maximum 3 books borrowing limit
-- Minimum Rs. 500 security deposit requirement
-- Cannot borrow the same book twice
-- 15-day borrowing period with extension options
+* 🔐 Email-based login for Admins & Borrowers
+* 🧑‍💼 Role-based menus
+* 🔑 Secure password verification
 
-### Module D: Fine and Regulations
-- Initial security deposit of Rs. 1500 for borrowers
-- Overdue fine: Rs. 2 per day, exponentially increasing every 10 days
-- Maximum fine capped at 80% of book cost
-- Lost book fine: 50% of book cost
-- Lost membership card fine: Rs. 10
-- Fine payment options: cash or security deposit deduction
-- Maximum 2 consecutive extensions per book
-- All borrowed books must be different
+---
 
-### Module E: Reports
-#### Admin Reports:
-1. Books with low quantity (for restocking)
-2. Books never borrowed
-3. Most borrowed books (top 10)
-4. Outstanding books by date
-5. Book status by ISBN (shows borrower details)
-6. All fines report
+### 📚 Module B: Book Inventory Management *(Admin Only)*
 
-#### Borrower Reports:
-1. Personal fine history with payment status
-2. Personal borrowing history
+* ➕ Add books with ISBN, title, author, quantity & cost
+* ✏️ Modify book details & stock
+* ❌ Delete books (if not borrowed)
+* 📊 View books sorted by name or quantity
+* 🔍 Search by title, ISBN, or author
+* 👥 Manage users (Add admins/borrowers)
+* 💰 Set fine/security limits
 
-## Data Persistence
-- All data is saved to text files:
-  - `users.txt` - User accounts and details
-  - `books.txt` - Book inventory
-  - `borrowing.txt` - Borrowing records
-  - `fines.txt` - Fine records
+---
 
-## Getting Started
+### 📖 Module C: Borrowing System *(Borrowers)*
 
-### Prerequisites
-- Java 8 or higher
-- Windows Command Prompt or PowerShell
+* 📘 View & search available books
+* 🛒 Add to cart and borrow (Max 3 books)
+* 💳 Min. ₹500 security deposit required
+* 🔁 Borrowing period: 15 days with 2 extensions
+* ❗ No duplicate book borrowing
 
-### Running the Application
+---
 
-1. **Compile the application:**
+### ⚖️ Module D: Fine & Regulations
+
+* 💵 Initial deposit: ₹1500
+* ⏱️ Overdue: ₹2/day, **exponentially increasing** every 10 days
+* 🔝 Max fine: 80% of book cost
+* 📕 Lost book: 50% fine
+* 🪪 Lost card: ₹10
+* 💳 Fine payment: Cash or from deposit
+* 🔂 Max 2 extensions/book
+* 🚫 No duplicate titles in cart
+
+---
+
+### 📑 Module E: Reports
+
+#### 📊 Admin Reports:
+
+1. 📉 Low stock books
+2. 📦 Never borrowed books
+3. 🏆 Top 10 borrowed books
+4. 📅 Outstanding by date
+5. 🔍 Status by ISBN (borrower info)
+6. 💸 All fines report
+
+#### 👤 Borrower Reports:
+
+1. 📜 Personal fine history
+2. 📚 Borrowing history
+
+---
+
+## 💾 Data Persistence
+
+All data is saved to `.txt` files:
+
+* `users.txt` – User accounts
+* `books.txt` – Book inventory
+* `borrowing.txt` – Borrowing records
+* `fines.txt` – Fine records
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+* Java 8+ ☕
+* Windows Command Prompt / PowerShell
+
+### ▶️ Running the Application
+
+1. **Compile the app:**
+
    ```bash
-   javac LibraryManagementSystem.java
+   javac LibrarySystem/Main.java
    ```
 
-2. **Run the application:**
+2. **Run the app:**
+
    ```bash
-   java LibraryManagementSystem
+   java LibrarySystem/Main
    ```
-   
-   Or simply double-click `run.bat`
 
-### Default Login Credentials
-- **Admin:** admin@library.com / admin123
-- The system will create sample books automatically on first run
+---
 
-## Sample Books Included
-1. Effective Java by Joshua Bloch (ISBN: 978-0134685991)
-2. Head First Design Patterns by Eric Freeman (ISBN: 978-0596009205)
-3. Clean Code by Robert Martin (ISBN: 978-0132350884)
-4. Effective Java Programming by Joshua Bloch (ISBN: 978-0321356680)
-5. Design Patterns by Gang of Four (ISBN: 978-0201633610)
+### 🔐 Default Login
 
-## Usage Instructions
+* **Admin:** `admin@library.com` / `admin123`
+  📘 Sample books auto-loaded on first run
 
-### For Administrators:
-1. Login with admin credentials
-2. Navigate through the menu to:
-   - Manage book inventory
-   - Add/modify users
-   - View comprehensive reports
-   - Manage fines
+---
+
+## 📦 Sample Books Included
+
+1. **Effective Java** – Joshua Bloch *(ISBN: 978-0134685991)*
+2. **Head First Design Patterns** – Eric Freeman *(ISBN: 978-0596009205)*
+3. **Clean Code** – Robert Martin *(ISBN: 978-0132350884)*
+4. **Effective Java Programming** – Joshua Bloch *(ISBN: 978-0321356680)*
+5. **Design Patterns** – Gang of Four *(ISBN: 978-0201633610)*
+
+---
+
+## 👨‍💻 Usage Instructions
+
+### For Admins:
+
+* 🔐 Login as Admin
+* 📚 Manage books and users
+* 🧾 View reports & manage fines
 
 ### For Borrowers:
-1. Register through admin or login with borrower credentials
-2. Ensure minimum Rs. 500 security deposit
-3. Browse and search books
-4. Add books to cart and checkout
-5. Return books on time to avoid fines
-6. View personal reports
 
-## File Structure
+* 🔐 Login via admin registration
+* 💳 Ensure ₹500 min deposit
+* 📘 Browse/search & borrow
+* ⏱️ Return on time to avoid fines
+* 📄 View personal reports
+
+---
+
+## 🗂️ File Structure
+
 ```
-LibraryManagementSystem.java  # Main application file
-run.bat                      # Windows batch file to run the application
-users.txt                    # User data storage
-books.txt                    # Book inventory storage
-borrowing.txt                # Borrowing records storage
-fines.txt                    # Fine records storage
+LibrarySystem/Main.java  # Main application
+users.txt                    # Users database
+books.txt                    # Book inventory
+borrowing.txt                # Borrowing records
+fines.txt                    # Fines tracking
 README.md                    # This file
 ```
 
-## Key Business Rules
-- Borrowers must maintain minimum Rs. 500 security deposit
-- Maximum 3 books can be borrowed simultaneously
-- 15-day borrowing period with 2 possible extensions
-- Overdue fines calculated with exponential progression
-- All borrowed books must be different titles
-- Fine payments can be made via cash or security deposit deduction
+---
 
-## Technical Features
-- Object-oriented design with proper encapsulation
-- Enum-based role and fine reason management
-- Date handling with proper formatting
-- File-based data persistence
-- Input validation and error handling
-- Comprehensive menu system
-- Sorted display options for better user experience
+## 📏 Key Business Rules
 
-## Future Enhancements
-- Database integration (MySQL/PostgreSQL)
-- GUI interface using JavaFX or Swing
-- Email notifications for due dates
-- Barcode scanning integration
-- Advanced search filters
-- Book recommendation system
-- Digital receipt generation
+* ₹500 min deposit required to borrow
+* Max 3 books per borrower
+* 15-day borrowing period + 2 extensions
+* 📈 Overdue fines increase exponentially
+* 📚 All books borrowed must be unique
+* 💳 Fine payment: Cash or from deposit
 
-## Support
-For any issues or questions, please refer to the code comments or contact the development team.
+---
+
+## ⚙️ Technical Features
+
+* 🧱 Object-Oriented Design (OOP)
+* 🧾 Enum for roles & fine reasons
+* 🕒 Proper date/time formatting
+* 📁 File-based data storage
+* ❌ Input validation & error handling
+* 🧭 Sorted display for better UX
+
+---
+
+## 🔮 Future Enhancements
+
+* 🗃️ Database support (MySQL/PostgreSQL)
+* 🖼️ GUI with JavaFX/Swing
+* 📬 Email reminders
+* 📷 Barcode scanning
+* 🔎 Advanced filters & search
+* 🤖 Book recommendation engine
+* 🧾 Digital receipts
+
+---
+
+## 🆘 Support
+
+For help, check in-code comments or contact the dev team. 💬
+
+---
